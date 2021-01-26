@@ -10,20 +10,20 @@
 
 <body class="grid-container">
     <header class="header">
-        <h1 class="stephen-header">StephenApp</h1>
+        <h1 class="stephen-header"><strong>Stephen</strong>App</h1>
 
         <h3 class="profile-name">Stephen Duckworth</h3>
+
+        <img class="profile-pic" src="images/Profile_avatar.png">
 
         <div class="bell-icon">
             <img src="icons/icon-bell.svg" alt="bell icon">
             <div class="notifications"></div>
         </div>
-        
-        <img class="profile-pic" src="">
     </header>
 
     <nav class="navigation">
-        <ol>
+        <ol class="dashboard-list">
             <li class="nav-list"><a href="#"><img src="icons/icon-dashboard.svg" width="30" height="30"></a></li>
             <li class="nav-list"><a href="#"><img src="icons/icon-members.svg" width="30" height="30"></a></li>
             <li class="nav-list"><a href="#"><img src="icons/icon-visits.svg" width="30" height="30"></a></li>
@@ -58,7 +58,7 @@
             <ul class="traffic-nav">
                 <li class="traffic-nav-link">Hourly</li>
                 <li class="traffic-nav-link">Daily</li>
-                <li class="traffic-nav-link">Weekly</li>
+                <li class="traffic-nav-link-weekly">Weekly</li>
                 <li class="traffic-nav-link">Monthly</li>
             </ul>
             </h3>
@@ -68,7 +68,7 @@
 
         <div class="widget-container-full">
         <!-- element line graph will attach to -->
-            <canvas id="traffic-chart"></canvas>
+            <canvas id="traffic-chart" width="100%"></canvas>
             <script></script>  
         </div>
     </section>
@@ -97,21 +97,30 @@
         <h3 class="social-header">Social Stats</h3>
         <div class="social-wrapper">
             <div class="twitter">
-                <img src="icons/icon-twitter.svg" width="100" height="100" class="icon-image">
-                <p class="social-text">Twitter</p>
-                <p class="social-number">10,345</p>
+                <img src="icons/icon-twitter.svg" width="75" height="75" class="icon-image">
+
+                <div class="social-text-layout">
+                    <p class="social-text">Twitter</p>
+                    <p class="social-number">10,345</p>
+                </div>
             </div>
 
             <div class="facebook">
-                <img src="icons/icon-facebook.svg" width="100" height="100" class="icon-image">
-                <p class="social-text">Facebook</p>
-                <p class="social-number">8,739</p>
+                <img src="icons/icon-facebook.svg" width="75" height="75" class="icon-image">
+
+                <div class="social-text-layout">
+                    <p class="social-text">Facebook</p>
+                    <p class="social-number">8,739</p>
+                </div>
             </div>
 
             <div class="google">
-                <img src="icons/icon-google-plus.svg" width="100" height="100" class="icon-image">
-                <p class="social-text">Google+</p>
-                <p class="social-number">2,530</p>
+                <img src="icons/icon-google-plus.svg" width="75" height="75" class="icon-image">
+
+                <div class="social-text-layout">
+                    <p class="social-text">Google+</p>
+                    <p class="social-number">2,530</p>
+                </div>
             </div>
         </div>
     </div>
@@ -125,7 +134,7 @@
                 
                     <p>Victoria Chambers</p>
 
-                    <a href="#">victoria.chambers80@example.com</a>
+                    <a href="#" class="email-text">victoria.chambers80@example.com</a>
 
                     <p class="date">10/15/15</p>
                 </div>
@@ -135,7 +144,7 @@
                 
                     <p>Dale Chambers</p>
 
-                    <a href="#">dale.byrd52@example.com</a>
+                    <a href="#" class="email-text">dale.byrd52@example.com</a>
 
                     <p class="date">10/15/15</p>
                 </div>
@@ -145,7 +154,7 @@
                 
                     <p>Dawn Wood</p>
 
-                    <a href="#">dawn.wood16@example.com</a>
+                    <a href="#" class="email-text">dawn.wood16@example.com</a>
                 
                     <p class="date">10/15/15</p>
                 </div>
@@ -155,7 +164,7 @@
 
                     <p>Dan Oliver</p>
 
-                    <a href="#">dan.oliver82@example.com</a>
+                    <a href="#" class="email-text">dan.oliver82@example.com</a>
 
                     <p class="date">10/15/15</p>
                 </div>
@@ -168,33 +177,33 @@
                 <div class="member-text">
                     <img src="images/member-1.jpg" class="profile-image">
                 
-                    <p>Victoria Chambers commented on <a href="#" class="bold-recent-comments">StephenApp's SEO Tips</a></p>
+                    <p>Victoria Chambers commented on <strong>StephenApp's SEO Tips</strong></p>
                
-                    <p class="bold-hours">4 Hours Ago</p>
+                    <p class="hours"><strong>4 Hours Ago</strong></p>
                 </div>
 
                 <div class="member-text">
                     <img src="images/member-2.jpg" class="profile-image">
 
-                    <p>Dale Byrd liked the post <a href="#" class="bold-recent-comments">Facebook's Changes for 2016</a></p>
+                    <p>Dale Byrd liked the post <strong>Facebook's Changes for 2016</strong></p>
                 
-                    <p class="bold-hours">5 Hours Ago</p>
+                    <p class="bold"><strong>5 Hours Ago</strong></p>
                 </div>
 
                 <div class="member-text">
                     <img src="images/member-3.jpg" class="profile-image">
                 
-                    <p>Dawn Wood commented on <a href="#" class="bold-recent-comments">Facebook's Changes for 2016</a></p>
+                    <p>Dawn Wood commented on <strong>Facebook's Changes for 2016</strong></p>
     
-                    <p class="bold-hours">5 Hours Ago</p>
+                    <p class="hours"><strong>5 Hours Ago</strong></p>
                 </div>
 
                 <div class="member-text">
                     <img src="images/member-4.jpg" class="profile-image">
                 
-                    <p>Dan Oliver posted <a href="#" class="bold-recent-comments">StephenApp's SEO Tips</a></p>
+                    <p>Dan Oliver posted <strong>StephenApp's SEO Tips</strong></p>
                 
-                    <p class="bold-hours">1 Day Ago</p>
+                    <p><strong>1 Day Ago</strong></p>
                 </div>
             </div>
     </section>
