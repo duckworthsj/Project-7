@@ -71,8 +71,8 @@ var dailyChart = new Chart(ctx, {
             datasets: [{
                 label: '# of hits',
                 data: [75, 115, 175, 125, 225, 200,100],
-                backgroundColor: ['blue', 'blue', 'blue', 'blue', 'blue','blue', 'blue'],
-                borderColor: ['blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue'],
+                backgroundColor: ['#7377bf', '#7377bf', '#7377bf', '#7377bf', '#7377bf', '#7377bf', '#7377bf'],
+                borderColor: ['#7377bf', '#7377bf', '#7377bf', '#7377bf', '#7377bf', '#7377bf', '#7377bf'],
                 borderWidth: 1
             }]
         },
