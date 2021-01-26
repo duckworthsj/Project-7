@@ -4,6 +4,21 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-weight: normal;
+}
+
+h3 {
+    color: #757575;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 1.5rem;
+}
+
+ol {
+    padding: 0;
+}
+
 /*== Grid Styles ==*/
 .grid-container {
     display: grid;
@@ -31,6 +46,12 @@ body {
     padding-bottom: 2rem;
 }
 
+.dashboard-list {
+    list-style-type: none;
+    padding-inline-start: none;
+    margin: 2rem;
+}
+
  /* == Header == */
  .header {
     grid-area: header;
@@ -52,17 +73,33 @@ body {
     margin: 0 1.5rem 0 0;
     vertical-align: middle;
     padding: 10px;
+    color: white;
+    font-size: 25px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.profile-pic {
+    float: right;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding-top: 5px;
+    margin-left: 25px;
 }
 
 .bell-icon {
-    height: 15px;
+    height: 25px;
     width: 20px;
-    padding: 10px;
+    padding: 15px 25px 15px 15px;
     float: right;
-    margin:;
+    border: #6468bf 2px solid;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
 }
 
-.bell:hover {
+.bell-icon:hover {
     transform: scale(1.1) rotate(5deg);
 }
 
@@ -73,6 +110,11 @@ body {
 
 .widget-container-full {
     margin: 0;
+}
+
+.headline {
+    margin-left: 1.5rem;
+    color: #757575;
 }
 
 .main-header {
@@ -128,12 +170,6 @@ body {
     width: 100%;
 }
 
-#daily-chart,
-#mobile-chart {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
-
 .traffic-nav {
     float: right;
     display: flex;
@@ -146,6 +182,15 @@ body {
 .traffic-nav-link {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.traffic-nav-link-weekly {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #81c98f 2px solid;
+    background-color: #81c98f;
+    border-radius: 25%;
+    color: white;
 }
 
 /* == Daily/Mobile Grid == */
@@ -172,6 +217,13 @@ body {
     margin-left: 1.5rem;
 }
 
+#daily-chart,
+#mobile-chart {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
 /* == Social Grid == */
 .social {
     grid-area: social;
@@ -195,19 +247,25 @@ body {
 .twitter,
 .facebook,
 .google {
-    padding: 0px;
-    margin: 0px 25px;
+    padding: 10px 60px 10px 60px;
+    margin: 0px;
+    border: #e1e1e1 2px solid;
 }
 
 .icon-image {
     float: left;
     margin: 0;
+    border: #7377bf 2px solid;
+    padding: 1.5rem;
+    border-radius: 50%;
 }
 
 .social-text {
     float: right;
-    font-size: 20px;
+    font-size: 25px;
     margin: 0;
+    color: #7477bf;
+    font-weight: bold;
 }
 
 .social-number {
@@ -235,20 +293,22 @@ body {
 }
 
 .profile-image {
-    height: 35px;
+    height: 50px;
     border-radius: 50%;
     float: left;
     padding-right: 5px;
 }
 
 .member-text {
-    font-size: .5rem;
+    font-size: .75rem;
     margin-left: 1.5rem;
+    color: #757575;
 }
 
 .date {
     float: right;
     padding-right: 20px;
+    display: flex;
 }
 
 .activity {
@@ -280,11 +340,14 @@ body {
     height: 75px;
     margin-bottom: 20px;
     margin-left: 1.5rem;
+    background-color: #fbfbfb;
+    border-color: #d1d1d1;
+    color: #bcbcbc;
 }
 
 .settings {
     grid-area: settings;
-    padding-bottom: 1000px;
+    padding-bottom: 30px;
     border: #e7e7e7 2px solid;
     border-left: none;
     border-right: none;
@@ -299,6 +362,7 @@ body {
 .strong {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    color: #757575;
 }
 
 .button-send {
@@ -318,6 +382,7 @@ body {
     padding-right: 100px;
     margin-bottom: 20px;
     margin-right: 1.5rem;
+    background-color: #b2b2b2;
 }
 
 .form-field {
@@ -325,6 +390,9 @@ body {
     height: 40px;
     margin-bottom: 20px;
     margin-left: 1.5rem;
+    background-color: #fbfbfb;
+    border-color: #d1d1d1;
+    color: #bcbcbc;
 }
 
 .timezone-field {
@@ -332,6 +400,9 @@ body {
     height: 40px;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
+    background-color: #fbfbfb;
+    border-color: #d1d1d1;
+    color: #bcbcbc;
 }
 
 .button-primary,
