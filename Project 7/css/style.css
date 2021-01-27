@@ -1,5 +1,12 @@
+* {
+    box-sizing: border-box;
+  }
+  canvas {
+    max-width: 100%;
+  }
+
 body {
-    width: 100%;
+    max-width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -10,7 +17,7 @@ h1 {
 
 h3 {
     color: #757575;
-    font-size: 15px;
+    font-size: 10px;
     text-transform: uppercase;
     margin: 1.5rem;
 }
@@ -23,17 +30,20 @@ ol {
 .grid-container {
     display: grid;
     width: 100%;
-    grid-template-columns: 100px 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "header header header"
-        "navigation dashboard dashboard"
-        "navigation alert alert"
-        "navigation traffic traffic"
-        "navigation daily mobile"
-        "navigation social social"
-        "navigation members activity"
-        "navigation message settings";
+        "header"
+        "navigation"
+        "dashboard"
+        "alert"
+        "traffic"
+        "daily"
+        "mobile"
+        "social"
+        "members"
+        "activity"
+        "message"
+        "settings"
 }
 
 /* == Navigation Sidebar == */
@@ -42,23 +52,21 @@ ol {
     background-color:#63649d;
 }
 
-.nav-list {
-    padding-bottom: 2rem;
-}
-
 .dashboard-list {
     list-style-type: none;
     padding-inline-start: none;
     margin: 2rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
- /* == Header == */
- .header {
+/* == Header == */
+.header {
     grid-area: header;
     background: #7477bf;
     color: white;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     margin: 0;
     
 }
@@ -66,6 +74,7 @@ ol {
 .stephen-header {
     float: left;
     margin: 0 0 0 1.5rem;
+    display: flex;
 }
 
 .profile-name {
@@ -84,19 +93,16 @@ ol {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    padding-top: 5px;
+    margin-right: 5px;
     margin-left: 25px;
+    margin-top: 5px;
 }
 
 .bell-icon {
-    height: 25px;
-    width: 20px;
-    padding: 15px 25px 15px 15px;
-    float: right;
-    border: #6468bf 2px solid;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    float: right;  
 }
 
 .bell-icon:hover {
@@ -131,6 +137,10 @@ ol {
     font-size: 17px;
 }
 
+input[type="search" i] {
+    padding: 5px 5px;
+}
+
 .alert {
     grid-area: alert;
     background-color: #7377bf;
@@ -138,7 +148,6 @@ ol {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-top: none;
-    margin-bottom: ;
 }
 
 .alert-text {
@@ -207,7 +216,6 @@ ol {
 .mobile {
     grid-area: mobile; 
     border: #e7e7e7 2px solid;
-    border-top: none;
     border-right: none;
     border-bottom: none;
     border-width: 100%;
@@ -219,8 +227,8 @@ ol {
 
 #daily-chart,
 #mobile-chart {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -247,9 +255,26 @@ ol {
 .twitter,
 .facebook,
 .google {
-    padding: 10px 60px 10px 60px;
-    margin: 0px;
-    border: #e1e1e1 2px solid;
+    text-align: center;
+    display: flex;
+    border:  #f1f1f1 2px solid;
+    background-color: #fbfbfb;
+    padding: 20px 30px;
+}
+
+.social-icon {
+    border: #7377bf 2px solid; 
+    background-color: #7377bf;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    margin-right: 10px;
+}
+
+#Layer_1 {
+    margin-top: 5px;
+    height: 55px;
+    width: 30px;
 }
 
 .icon-image {
@@ -262,15 +287,14 @@ ol {
 
 .social-text {
     float: right;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0;
     color: #7477bf;
     font-weight: bold;
 }
 
 .social-number {
-    font-size: 50px;
-    float: right;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -288,31 +312,43 @@ ol {
     margin-left: 1.5rem;
 }
 
+.member-container {
+    display: flex;
+}
+
 .activity {
     border-width: 100%;
 }
 
 .profile-image {
-    height: 50px;
+    height: 65px;
     border-radius: 50%;
     float: left;
-    padding-right: 5px;
+    padding-right: 25px;
 }
 
-.member-text {
-    font-size: .75rem;
+.member-text,
+.activity-text {
+    font-size: 10px;
     margin-left: 1.5rem;
     color: #757575;
 }
 
 .date {
     float: right;
-    padding-right: 20px;
-    display: flex;
+    padding-right: 400px;
+    margin: -15px;
+    font-size: 20px;
 }
 
 .activity {
     grid-area: activity;
+    border: #e7e7e7 2px solid;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
 }
 
 .recent-header {
@@ -323,10 +359,8 @@ ol {
 .message {
     grid-area: message;
     padding-right: 20px;
-    margin-right: ;
     border: #e7e7e7 2px solid;
     border-left: none;
-    border-right: ;
     border-width: 100%;
 }
 
@@ -334,9 +368,8 @@ ol {
     margin-left: 1.5rem;
 }
 
-
 .form-area {
-    width: 95%;
+    width: 97%;
     height: 75px;
     margin-bottom: 20px;
     margin-left: 1.5rem;
@@ -386,7 +419,7 @@ ol {
 }
 
 .form-field {
-    width: 94%;
+    width: 97%;
     height: 40px;
     margin-bottom: 20px;
     margin-left: 1.5rem;
@@ -396,7 +429,7 @@ ol {
 }
 
 .timezone-field {
-    width: 90%;
+    width: 95%;
     height: 40px;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
@@ -407,7 +440,7 @@ ol {
 
 .button-primary,
 .button-disabled {
-    width: 42%;
+    width: 46%;
     height: 40px;
     margin-bottom: 20px;
     background-color: #7477bf;
@@ -421,3 +454,123 @@ ol {
     background-color: #b2b2b2;
     border: none;
 }
+
+@media (min-width: 768px) {
+    /*== Grid Styles ==*/
+    .grid-container {
+        grid-template-columns: 100px 1fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "navigation dashboard dashboard"
+            "navigation alert alert"
+            "navigation traffic traffic"
+            "navigation daily mobile"
+            "navigation social social"
+            "navigation members activity"
+            "navigation message settings";
+    }
+  
+    /* == Navigation Sidebar == */
+    .dashboard-list {
+        list-style-type: none;
+        padding-inline-start: none;
+        margin: 2rem;
+        display: block;
+
+    }
+    .nav-list {
+        padding-bottom: 2rem;
+    }
+
+    /* == Header == */
+    .header {
+        grid-area: header;
+    }
+  
+    /* == Dashboard == */
+    .widget {
+        grid-area: dashboard;
+    }
+
+    .main-header {
+        grid-area: dashboard;
+    }
+  
+    .main-header-search {
+        grid-area: dashboard;
+    }
+
+    .alert {
+        grid-area: alert;
+    }
+  
+    /* == Traffic Grid == */
+    .traffic {
+        grid-area: traffic;
+    }
+
+    /* == Daily/Mobile Grid == */
+    .daily {
+        grid-area: daily;
+    }
+  
+    .mobile {
+        grid-area: mobile; 
+        border-top: none;
+    }
+
+    /* == Social Grid == */
+    .social {
+        grid-area: social; 
+    }
+
+
+    /* == Members/Recent Grid == */
+    .members {
+        grid-area: members;
+    }
+  
+    .profile-image {
+        height: 40px;
+        padding-right: 5px;
+    }
+  
+    .member-text,
+    .activity-text {
+        font-size: .6rem;
+    }
+  
+    .date {
+        float: right;
+        padding-right: 30px;
+        font-size: 10px;
+    }
+  
+    .activity {
+        grid-area: activity;
+        margin-top: 0px;
+        border-top: none;
+    }
+  
+    /* == Message/Setting Grid == */
+  
+    .form-area {
+        width: 95%;
+    }
+  
+    .settings {
+        grid-area: settings;
+    }
+  
+    .form-field {
+        width: 94%;
+    }
+  
+    .timezone-field {
+        width: 90%;
+    }
+  
+    .button-primary,
+    .button-disabled {
+        width: 42%;
+    }
