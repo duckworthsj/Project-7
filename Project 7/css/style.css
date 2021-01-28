@@ -54,7 +54,6 @@ ol {
 
 .dashboard-list {
     list-style-type: none;
-    padding-inline-start: none;
     margin: 2rem;
     display: flex;
     justify-content: space-evenly;
@@ -147,7 +146,6 @@ input[type="search" i] {
     color: white;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    margin-top: none;
 }
 
 .alert-text {
@@ -167,7 +165,6 @@ input[type="search" i] {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-width: 100%;
 }
 
 .traffic-header {
@@ -176,7 +173,7 @@ input[type="search" i] {
 }
 
 #traffic-chart {
-    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 .traffic-nav {
@@ -205,7 +202,6 @@ input[type="search" i] {
 /* == Daily/Mobile Grid == */
 .daily {
     grid-area: daily;
-    border-width: 100%;
 }
 
 .daily-header {
@@ -218,7 +214,6 @@ input[type="search" i] {
     border: #e7e7e7 2px solid;
     border-right: none;
     border-bottom: none;
-    border-width: 100%;
 }
 
 .mobile-header {
@@ -238,7 +233,6 @@ input[type="search" i] {
     border: #e7e7e7 2px solid;
     border-left: none;
     border-right: none;
-    border-width: 100%; 
 }
 
 .social-header {
@@ -305,40 +299,31 @@ input[type="search" i] {
     border-left: none;
     border-top: none;
     border-bottom: none;
-    border-width: 100%;
 }
 
 .members-header {
     margin-left: 1.5rem;
 }
 
-.member-container {
-    display: flex;
-}
-
-.activity {
-    border-width: 100%;
-}
-
 .profile-image {
-    height: 65px;
+    height: 50px;
     border-radius: 50%;
     float: left;
-    padding-right: 25px;
+    margin-right: 25px;
 }
 
 .member-text,
 .activity-text {
-    font-size: 10px;
+    font-size: 15px;
     margin-left: 1.5rem;
     color: #757575;
 }
 
 .date {
     float: right;
-    padding-right: 400px;
+    padding-right: 300px;
     margin: -15px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .activity {
@@ -361,7 +346,6 @@ input[type="search" i] {
     padding-right: 20px;
     border: #e7e7e7 2px solid;
     border-left: none;
-    border-width: 100%;
 }
 
 .message-header {
@@ -384,7 +368,6 @@ input[type="search" i] {
     border: #e7e7e7 2px solid;
     border-left: none;
     border-right: none;
-    border-width: 100%;
 }
 
 .settings-header {
@@ -438,6 +421,10 @@ input[type="search" i] {
     color: #bcbcbc;
 }
 
+.button-primary{
+    margin-left: 1.5rem;
+}
+
 .button-primary,
 .button-disabled {
     width: 46%;
@@ -445,7 +432,6 @@ input[type="search" i] {
     margin-bottom: 20px;
     background-color: #7477bf;
     color:  white;
-    margin-left: 1.5rem;
     box-shadow: none;
     border: none;
 }
@@ -473,7 +459,172 @@ input[type="search" i] {
     /* == Navigation Sidebar == */
     .dashboard-list {
         list-style-type: none;
-        padding-inline-start: none;
+        margin: 2rem;
+        display: block;
+
+    }
+    .nav-list {
+        padding-bottom: 2rem;
+    }
+
+    /* == Header == */
+    .header {
+        grid-area: header;
+    }
+
+    .profile-name {
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        height: 30px;
+        width: 30px;
+    }
+
+    .bell-icon {
+        height: 20px;
+        width: 25px;  
+    }
+  
+    /* == Dashboard == */
+    .widget {
+        grid-area: dashboard;
+    }
+
+    .main-header {
+        grid-area: dashboard;
+    }
+  
+    .main-header-search {
+        grid-area: dashboard;
+    }
+
+    .alert {
+        grid-area: alert;
+    }
+  
+    /* == Traffic Grid == */
+    .traffic {
+        grid-area: traffic;
+    }
+
+    /* == Daily/Mobile Grid == */
+    .daily {
+        grid-area: daily;
+    }
+  
+    .mobile {
+        grid-area: mobile; 
+        border-top: none;
+    }
+
+    /* == Social Grid == */
+    .social {
+        grid-area: social; 
+    }
+
+    .twitter,
+    .facebook,
+    .google,
+    .social-wrapper {
+        justify-content: space-evenly;
+        padding: 10px 15px;
+    }
+
+    .social-icon{
+        height: 60px;
+        width: 60px;
+    }
+
+    /* == Members/Recent Grid == */
+    .members {
+        grid-area: members;
+    }
+  
+    .profile-image {
+        height: 30px;
+    }
+  
+    .member-text,
+    .activity-text {
+        font-size: .6rem;
+    }
+  
+    .date {
+        float: right;
+        padding-right: 30px;
+        font-size: 10px;
+    }
+  
+    .activity {
+        grid-area: activity;
+        margin-top: 0px;
+        border-top: none;
+    }
+  
+    /* == Message/Setting Grid == */
+  
+    .form-area {
+        width: 91%;
+        height: 85px;
+    }
+  
+    .settings {
+        grid-area: settings;
+    }
+
+    .strong {
+        margin-right: 0px;
+    }
+  
+    .form-field {
+        width: 91%;
+    }
+
+    .button-send {
+        width: 91%;
+    }
+
+    .button {
+        width: 100px;
+    }
+  
+    .timezone-field {
+        width: 85%;
+    }
+    
+    .button-primary{
+        margin-left: 1.5rem;
+    }
+
+    .button-disabled {
+        margin-right: 1.5rem;
+    }
+
+    .button-primary,
+    .button-disabled {
+        width: 42%;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*== Grid Styles ==*/
+    .grid-container {
+        grid-template-columns: 100px 1fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "navigation dashboard dashboard"
+            "navigation alert alert"
+            "navigation traffic traffic"
+            "navigation daily mobile"
+            "navigation social social"
+            "navigation members activity"
+            "navigation message settings";
+    }
+  
+    /* == Navigation Sidebar == */
+    .dashboard-list {
+        list-style-type: none;
         margin: 2rem;
         display: block;
 
@@ -524,6 +675,18 @@ input[type="search" i] {
         grid-area: social; 
     }
 
+    .twitter,
+    .facebook,
+    .google,
+    .social-wrapper {
+        justify-content: space-evenly;
+        padding: 20px 75px;
+    }
+
+    .social-icon{
+        height: 60px;
+        width: 60px;
+    }
 
     /* == Members/Recent Grid == */
     .members {
@@ -531,19 +694,18 @@ input[type="search" i] {
     }
   
     .profile-image {
-        height: 40px;
-        padding-right: 5px;
+        height: 60px;
     }
   
     .member-text,
     .activity-text {
-        font-size: .6rem;
+        font-size: 1.3rem;
     }
   
     .date {
         float: right;
         padding-right: 30px;
-        font-size: 10px;
+        font-size: 1.3rem;
     }
   
     .activity {
@@ -555,22 +717,45 @@ input[type="search" i] {
     /* == Message/Setting Grid == */
   
     .form-area {
-        width: 95%;
+        width: 91%;
+        height: 85px;
     }
   
     .settings {
         grid-area: settings;
     }
+
+    .strong {
+        margin-right: 0px;
+    }
   
     .form-field {
-        width: 94%;
+        width: 91%;
+    }
+
+    .button-send {
+        width: 91%;
+    }
+
+    .button {
+        width: 100px;
     }
   
     .timezone-field {
-        width: 90%;
+        width: 85%;
     }
-  
+    
+    .button-primary{
+        margin-left: 1.5rem;
+    }
+
+    .button-disabled {
+        margin-right: 1.5rem;
+    }
+
     .button-primary,
     .button-disabled {
         width: 42%;
     }
+
+}
