@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>WebApp Dashboard</title>
   <meta name="description" content="WebApp Dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/toggle-switch.css">
 </head>
@@ -14,7 +15,7 @@
 
         <h3 class="profile-name">Stephen Duckworth</h3>
 
-        <img class="profile-pic" src="images/Profile_avatar.png">
+        <img class="profile-pic" src="images/Profile_avatar.png" alt="profile avatar">
         <div class="bell-wrapper">
         <div class="bell-icon">
             <svg version="1.1" id="bell" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -36,10 +37,10 @@
 
     <nav class="navigation">
         <ol class="dashboard-list">
-            <li class="nav-list"><a href="#"><img src="icons/icon-dashboard.svg" width="30" height="30"></a></li>
-            <li class="nav-list"><a href="#"><img src="icons/icon-members.svg" width="30" height="30"></a></li>
-            <li class="nav-list"><a href="#"><img src="icons/icon-visits.svg" width="30" height="30"></a></li>
-            <li class="nav-list"><a href="#"><img src="icons/icon-settings.svg" width="30" height="30"></a></li>
+            <li class="nav-list"><a href="#"><img src="icons/icon-dashboard.svg" alt ="dashboard icon" width="30" height="30"></a></li>
+            <li class="nav-list"><a href="#"><img src="icons/icon-members.svg" alt="members icon" width="30" height="30"></a></li>
+            <li class="nav-list"><a href="#"><img src="icons/icon-visits.svg" alt="visits icon" width="30" height="30"></a></li>
+            <li class="nav-list"><a href="#"><img src="icons/icon-settings.svg" alt="settings icon" width="30" height="30"></a></li>
         </ol>
     </nav>
 
@@ -58,7 +59,7 @@
                 <p class="alert-text"><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete<button onclick="hideAlert()" class="alert-banner-close">x</button></p>
             </div>
 
-            <script></script><!-- JS will insert alert here -->
+            <script></script>
         </div>
     
 
@@ -79,8 +80,7 @@
         </div>
 
         <div class="widget-container-full">
-        <!-- element line graph will attach to -->
-            <canvas id="traffic-chart" width="100%"></canvas>
+            <canvas id="traffic-chart"></canvas>
             <script></script>  
         </div>
     </section>
@@ -90,7 +90,6 @@
         <h3 class="daily-header">Daily Traffic</h3>
 
         <div class="widget-container-half">
-<!-- element bar graph will attach to -->
             <canvas id="daily-chart"></canvas>
         </div>
     </section>
@@ -99,7 +98,6 @@
         <h3 class="mobile-header">Mobile Users</h3>
 
         <div class="widget-container-half">
-<!-- element donut graph will attach to -->
             <canvas id="mobile-chart"></canvas>
         </div>
     </section>
@@ -175,7 +173,7 @@
         <h3 class="members-header">New Members</h3>
             <div class="members-container">
                 <div class="member-text">
-                    <img src="images/member-1.jpg" class="profile-image">
+                    <img src="images/member-1.jpg" class="profile-image" alt="member 1 image">
                 
                     <p>Victoria Chambers</p>
 
@@ -185,7 +183,7 @@
                 </div>
 
                 <div class="member-text">
-                    <img src="images/member-2.jpg" class="profile-image">
+                    <img src="images/member-2.jpg" class="profile-image" alt="member 2 image">
                 
                     <p>Dale Chambers</p>
 
@@ -195,7 +193,7 @@
                 </div>
 
                 <div class="member-text">
-                    <img src="images/member-3.jpg" class="profile-image">
+                    <img src="images/member-3.jpg" class="profile-image" alt="member 3 image">
                 
                     <p>Dawn Wood</p>
 
@@ -205,7 +203,7 @@
                 </div>
 
                 <div class="member-text">    
-                    <img src="images/member-4.jpg" class="profile-image">
+                    <img src="images/member-4.jpg" class="profile-image" alt="member 4 image">
 
                     <p>Dan Oliver</p>
 
@@ -220,7 +218,7 @@
         <h3 class="recent-header">Recent Activity</h3>
             <div class="activity-container">
                 <div class="activity-text">
-                    <img src="images/member-1.jpg" class="profile-image">
+                    <img src="images/member-1.jpg" class="profile-image" alt="member 1 image">
                 
                     <p>Victoria Chambers commented on <strong>StephenApp's SEO Tips</strong></p>
                
@@ -228,7 +226,7 @@
                 </div>
 
                 <div class="activity-text">
-                    <img src="images/member-2.jpg" class="profile-image">
+                    <img src="images/member-2.jpg" class="profile-image" alt="member 2 image">
 
                     <p>Dale Byrd liked the post <strong>Facebook's Changes for 2016</strong></p>
                 
@@ -236,7 +234,7 @@
                 </div>
 
                 <div class="activity-text">
-                    <img src="images/member-3.jpg" class="profile-image">
+                    <img src="images/member-3.jpg" class="profile-image" alt="member 3 image">
                 
                     <p>Dawn Wood commented on <strong>Facebook's Changes for 2016</strong></p>
     
@@ -244,7 +242,7 @@
                 </div>
 
                 <div class="activity-text">
-                    <img src="images/member-4.jpg" class="profile-image">
+                    <img src="images/member-4.jpg" class="profile-image" alt="member 4 image">
                 
                     <p>Dan Oliver posted <strong>StephenApp's SEO Tips</strong></p>
                 
@@ -269,7 +267,6 @@ id= "messageField"></textarea>
 <!-- local settings widget -->
     <section class="settings">
         <h3 class="settings-header">Settings</h3>
-        <!-- custom CSS toggle code-->
             <label class="switch-light switch-candy" onclick="">
                 <input type="checkbox">
                     <strong class="strong">Send Email Notifications</strong>
@@ -280,7 +277,6 @@ id= "messageField"></textarea>
                         <a></a>
                     </span>
             </label>
-        <!-- custom CSS toggle code-->
             <label class="switch-light switch-candy" onclick="">
                 <input type="checkbox">
                     <strong class="strong">Set Profile to Public</strong>
@@ -313,4 +309,4 @@ id= "messageField"></textarea>
   
 </body>
 
-</html>
+</html> 
