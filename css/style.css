@@ -1,0 +1,761 @@
+* {
+    box-sizing: border-box;
+  }
+  canvas {
+    max-width: 100%;
+  }
+
+body {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+h3 {
+    color: #757575;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 1.5rem;
+}
+
+ol {
+    padding: 0;
+}
+
+/*== Grid Styles ==*/
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "navigation"
+        "dashboard"
+        "alert"
+        "traffic"
+        "daily"
+        "mobile"
+        "social"
+        "members"
+        "activity"
+        "message"
+        "settings"
+}
+
+/* == Navigation Sidebar == */
+.navigation {
+    grid-area: navigation;
+    background-color:#63649d;
+}
+
+.dashboard-list {
+    list-style-type: none;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* == Header == */
+.header {
+    grid-area: header;
+    background: #7477bf;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    
+}
+
+.stephen-header {
+    float: left;
+    margin: 0 0 0 1.5rem;
+    display: flex;
+}
+
+.profile-name {
+    float: right;
+    margin: 0 1.5rem 0 0;
+    vertical-align: middle;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.profile-pic {
+    float: right;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+.bell-icon {
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    float: right;  
+}
+
+.bell-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* == Dashboard == */
+.widget {
+    grid-area: dashboard;
+}
+
+.widget-container-full {
+    margin: 0;
+}
+
+.headline {
+    margin-left: 1.5rem;
+    color: #757575;
+}
+
+.main-header {
+    grid-area: dashboard;
+    float: left;
+}
+
+.main-header-search {
+    grid-area: dashboard;
+    float: right;
+    padding: 10px 0px 10px 10px;
+    border: none;
+    margin: 20px 24px 20px 20px;
+    font-size: 17px;
+}
+
+input[type="search" i] {
+    padding: 5px 5px;
+}
+
+.alert {
+    grid-area: alert;
+    background-color: #7377bf;
+    color: white;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.alert-text {
+    margin-left: 10px;
+}
+
+.alert-banner-close {
+    float: right;
+    margin: 0px 10px 0px 0px;
+    justify-items: center;
+}
+
+/* == Traffic Grid == */
+.traffic {
+    grid-area: traffic;
+    border: #e7e7e7 2px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.traffic-header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+#traffic-chart {
+    margin-bottom: 1.5rem;
+}
+
+.traffic-nav {
+    float: right;
+    display: flex;
+    vertical-align: middle;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.traffic-nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.traffic-nav-link-weekly {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #81c98f 2px solid;
+    background-color: #81c98f;
+    border-radius: 25%;
+    color: white;
+}
+
+/* == Daily/Mobile Grid == */
+.daily {
+    grid-area: daily;
+}
+
+.daily-header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.mobile {
+    grid-area: mobile; 
+    border: #e7e7e7 2px solid;
+    border-right: none;
+    border-bottom: none;
+}
+
+.mobile-header {
+    margin-left: 1.5rem;
+}
+
+#daily-chart,
+#mobile-chart {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* == Social Grid == */
+.social {
+    grid-area: social;
+    border: #e7e7e7 2px solid;
+    border-left: none;
+    border-right: none;
+}
+
+.social-header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.social-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+}
+
+.twitter,
+.facebook,
+.google {
+    text-align: center;
+    display: flex;
+    border:  #f1f1f1 2px solid;
+    background-color: #fbfbfb;
+    padding: 20px 30px;
+}
+
+.social-icon {
+    border: #7377bf 2px solid; 
+    background-color: #7377bf;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    margin-right: 10px;
+}
+
+#Layer_1 {
+    margin-top: 5px;
+    height: 55px;
+    width: 30px;
+}
+
+.icon-image {
+    float: left;
+    margin: 0;
+    border: #7377bf 2px solid;
+    padding: 1.5rem;
+    border-radius: 50%;
+}
+
+.social-text {
+    float: right;
+    font-size: 20px;
+    margin: 0;
+    color: #7477bf;
+    font-weight: bold;
+}
+
+.social-number {
+    font-size: 40px;
+    margin: 0;
+}
+
+/* == Members/Recent Grid == */
+.members {
+    grid-area: members;
+    border: #e7e7e7 2px solid;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.members-header {
+    margin-left: 1.5rem;
+}
+
+.profile-image {
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 25px;
+}
+
+.member-text,
+.activity-text {
+    font-size: 15px;
+    margin-left: 1.5rem;
+    color: #757575;
+}
+
+.date {
+    float: right;
+    padding-right: 300px;
+    margin: -15px;
+    font-size: 15px;
+}
+
+.activity {
+    grid-area: activity;
+    border: #e7e7e7 2px solid;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+.recent-header {
+    margin-left: 1.5rem;
+}
+
+/* == Message/Setting Grid == */
+.message {
+    grid-area: message;
+    padding-right: 20px;
+    border: #e7e7e7 2px solid;
+    border-left: none;
+}
+
+.message-header {
+    margin-left: 1.5rem;
+}
+
+.form-area {
+    width: 97%;
+    height: 75px;
+    margin-bottom: 20px;
+    margin-left: 1.5rem;
+    background-color: #fbfbfb;
+    border-color: #d1d1d1;
+    color: #bcbcbc;
+}
+
+.settings {
+    grid-area: settings;
+    padding-bottom: 30px;
+    border: #e7e7e7 2px solid;
+    border-left: none;
+    border-right: none;
+}
+
+.settings-header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.strong {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: #757575;
+}
+
+.button-send {
+    width: 97%;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: #7477bf;
+    color: white;
+    margin-left: 1.5rem;
+    border: none;
+}
+
+.button {
+    width: 150px;
+    border-radius: 25%;
+    float: right;
+    padding-right: 100px;
+    margin-bottom: 20px;
+    margin-right: 1.5rem;
+    background-color: #b2b2b2;
+}
+
+.form-field {
+    width: 97%;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 1.5rem;
+    background-color: #fbfbfb;
+    border-color: #d1d1d1;
+    color: #bcbcbc;
+}
+
+.timezone-field {
+    width: 95%;
+    height: 40px;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #fbfbfb;
+    border-color: #d1d1d1;
+    color: #bcbcbc;
+}
+
+.button-primary{
+    margin-left: 1.5rem;
+}
+
+.button-primary,
+.button-disabled {
+    width: 46%;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: #7477bf;
+    color:  white;
+    box-shadow: none;
+    border: none;
+}
+
+.button-disabled {
+    background-color: #b2b2b2;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    /*== Grid Styles ==*/
+    .grid-container {
+        grid-template-columns: 100px 1fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "navigation dashboard dashboard"
+            "navigation alert alert"
+            "navigation traffic traffic"
+            "navigation daily mobile"
+            "navigation social social"
+            "navigation members activity"
+            "navigation message settings";
+    }
+  
+    /* == Navigation Sidebar == */
+    .dashboard-list {
+        list-style-type: none;
+        margin: 2rem;
+        display: block;
+
+    }
+    .nav-list {
+        padding-bottom: 2rem;
+    }
+
+    /* == Header == */
+    .header {
+        grid-area: header;
+    }
+
+    .profile-name {
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        height: 30px;
+        width: 30px;
+    }
+
+    .bell-icon {
+        height: 20px;
+        width: 25px;  
+    }
+  
+    /* == Dashboard == */
+    .widget {
+        grid-area: dashboard;
+    }
+
+    .main-header {
+        grid-area: dashboard;
+    }
+  
+    .main-header-search {
+        grid-area: dashboard;
+    }
+
+    .alert {
+        grid-area: alert;
+    }
+  
+    /* == Traffic Grid == */
+    .traffic {
+        grid-area: traffic;
+    }
+
+    /* == Daily/Mobile Grid == */
+    .daily {
+        grid-area: daily;
+    }
+  
+    .mobile {
+        grid-area: mobile; 
+        border-top: none;
+    }
+
+    /* == Social Grid == */
+    .social {
+        grid-area: social; 
+    }
+
+    .twitter,
+    .facebook,
+    .google,
+    .social-wrapper {
+        justify-content: space-evenly;
+        padding: 10px 15px;
+    }
+
+    .social-icon{
+        height: 60px;
+        width: 60px;
+    }
+
+    /* == Members/Recent Grid == */
+    .members {
+        grid-area: members;
+    }
+  
+    .profile-image {
+        height: 30px;
+    }
+  
+    .member-text,
+    .activity-text {
+        font-size: .6rem;
+    }
+  
+    .date {
+        float: right;
+        padding-right: 30px;
+        font-size: 10px;
+    }
+  
+    .activity {
+        grid-area: activity;
+        margin-top: 0px;
+        border-top: none;
+    }
+  
+    /* == Message/Setting Grid == */
+  
+    .form-area {
+        width: 91%;
+        height: 85px;
+    }
+  
+    .settings {
+        grid-area: settings;
+    }
+
+    .strong {
+        margin-right: 0px;
+    }
+  
+    .form-field {
+        width: 91%;
+    }
+
+    .button-send {
+        width: 91%;
+    }
+
+    .button {
+        width: 100px;
+    }
+  
+    .timezone-field {
+        width: 85%;
+    }
+    
+    .button-primary{
+        margin-left: 1.5rem;
+    }
+
+    .button-disabled {
+        margin-right: 1.5rem;
+    }
+
+    .button-primary,
+    .button-disabled {
+        width: 42%;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*== Grid Styles ==*/
+    .grid-container {
+        grid-template-columns: 100px 1fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "navigation dashboard dashboard"
+            "navigation alert alert"
+            "navigation traffic traffic"
+            "navigation daily mobile"
+            "navigation social social"
+            "navigation members activity"
+            "navigation message settings";
+    }
+  
+    /* == Navigation Sidebar == */
+    .dashboard-list {
+        list-style-type: none;
+        margin: 2rem;
+        display: block;
+
+    }
+    .nav-list {
+        padding-bottom: 2rem;
+    }
+
+    /* == Header == */
+    .header {
+        grid-area: header;
+    }
+  
+    /* == Dashboard == */
+    .widget {
+        grid-area: dashboard;
+    }
+
+    .main-header {
+        grid-area: dashboard;
+    }
+  
+    .main-header-search {
+        grid-area: dashboard;
+    }
+
+    .alert {
+        grid-area: alert;
+    }
+  
+    /* == Traffic Grid == */
+    .traffic {
+        grid-area: traffic;
+    }
+
+    /* == Daily/Mobile Grid == */
+    .daily {
+        grid-area: daily;
+    }
+  
+    .mobile {
+        grid-area: mobile; 
+        border-top: none;
+    }
+
+    /* == Social Grid == */
+    .social {
+        grid-area: social; 
+    }
+
+    .twitter,
+    .facebook,
+    .google,
+    .social-wrapper {
+        justify-content: space-evenly;
+        padding: 20px 75px;
+    }
+
+    .social-icon{
+        height: 60px;
+        width: 60px;
+    }
+
+    /* == Members/Recent Grid == */
+    .members {
+        grid-area: members;
+    }
+  
+    .profile-image {
+        height: 60px;
+    }
+  
+    .member-text,
+    .activity-text {
+        font-size: 1.3rem;
+    }
+  
+    .date {
+        float: right;
+        padding-right: 30px;
+        font-size: 1.3rem;
+    }
+  
+    .activity {
+        grid-area: activity;
+        margin-top: 0px;
+        border-top: none;
+    }
+  
+    /* == Message/Setting Grid == */
+  
+    .form-area {
+        width: 91%;
+        height: 85px;
+    }
+  
+    .settings {
+        grid-area: settings;
+    }
+
+    .strong {
+        margin-right: 0px;
+    }
+  
+    .form-field {
+        width: 91%;
+    }
+
+    .button-send {
+        width: 91%;
+    }
+
+    .button {
+        width: 100px;
+    }
+  
+    .timezone-field {
+        width: 85%;
+    }
+    
+    .button-primary{
+        margin-left: 1.5rem;
+    }
+
+    .button-disabled {
+        margin-right: 1.5rem;
+    }
+
+    .button-primary,
+    .button-disabled {
+        width: 42%;
+    }
+
+}
