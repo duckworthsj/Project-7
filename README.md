@@ -1,2 +1,2 @@
 # Project-7
-Treehouse FEWD TechDegree Project 7
+An interactive Web App Dashboard
